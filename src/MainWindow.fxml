@@ -7,7 +7,7 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="122.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+<AnchorPane prefHeight="141.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
    <children>
       <Button fx:id="button1" layoutX="9.0" layoutY="61.0" mnemonicParsing="false" onAction="#calculate" text="Calculate" />
       <TextField fx:id="input" layoutX="9.0" layoutY="28.0" promptText="Integer Only" />
@@ -21,5 +21,6 @@
       <RadioButton fx:id="prime" layoutX="249.0" layoutY="31.0" mnemonicParsing="false" onAction="#printPrime" text="Prime" toggleGroup="$functionality" />
       <RadioButton fx:id="factor" layoutX="249.0" layoutY="53.0" mnemonicParsing="false" onAction="#printFactor" text="Factor" toggleGroup="$functionality" />
       <RadioButton fx:id="ArmStrongNumber" layoutX="249.0" layoutY="79.0" mnemonicParsing="false" onAction="#ArmStrongNumber" text="ArmStrong Number" toggleGroup="$functionality" />
+      <RadioButton fx:id="factorial" layoutX="249.0" layoutY="110.0" mnemonicParsing="false" onAction="#FactorialNumber" text="Factorial" toggleGroup="$functionality" />
    </children>
 </AnchorPane>

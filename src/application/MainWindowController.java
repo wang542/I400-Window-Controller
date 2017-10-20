@@ -33,11 +33,23 @@ public class MainWindowController {
 	private RadioButton factor;
 	@FXML
 	private RadioButton ArmStrongNumber;
+	@FXML
+	private RadioButton factorial;
 
 
 	
 	
 	
+	
+	@FXML
+	public void Factorials(String numbers) {
+		int origi=Integer.parseInt(numbers);
+		int result=1;
+		for(int i=1; i<origi+1;i++) {
+			result=result*i;
+		}
+		output.setText("Factorials: "+result);
+	}
 	
 	
 	
@@ -82,6 +94,8 @@ public class MainWindowController {
 			printFactor(blank);
 		else if(ArmStrongNumber.isSelected())
 			ArmStrongNumber(blank);
+		else if(factorial.isSelected())
+			FactorialNumber(blank);
 		else
 			output.setText("Please select an option");
 		
@@ -160,6 +174,11 @@ public class MainWindowController {
 	@FXML
 	public void ArmStrongNumber(ActionEvent e) {
 		ArmStrong(input.getText());
+	}
+	
+	@FXML
+	public void FactorialNumber(ActionEvent e) {
+		Factorials(input.getText());
 	}
 	
 	
