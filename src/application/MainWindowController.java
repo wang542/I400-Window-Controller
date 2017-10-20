@@ -31,8 +31,39 @@ public class MainWindowController {
 	private RadioButton prime;
 	@FXML
 	private RadioButton factor;
+	@FXML
+	private RadioButton ArmStrongNumber;
 
 
+	
+	
+	
+	
+	
+	
+	//Find Armstrong numbers method
+	 
+	@FXML
+	public void ArmStrong(String numbers) {
+		String[] digits =(""+numbers).split("");
+		int total=Integer.parseInt(numbers);
+		int compare=0;
+		for (int i=0;i<digits.length;i++) {
+			int place=digits.length;
+			compare+=Math.pow((double)Integer.parseInt(digits[i]),(double)place);
+			
+		}
+		
+		if (compare==total) {
+			output.setText("Yes");
+		}
+		else {
+			output.setText("No");
+		}
+	
+		
+	}
+	
 	/**
 	 * The method that is called when button1 is clicked.
 	 * 
@@ -49,6 +80,8 @@ public class MainWindowController {
 			printPrime(blank);
 		else if(factor.isSelected())
 			printFactor(blank);
+		else if(ArmStrongNumber.isSelected())
+			ArmStrongNumber(blank);
 		else
 			output.setText("Please select an option");
 		
@@ -121,6 +154,12 @@ public class MainWindowController {
 		}catch (NumberFormatException ex) {
 		    output.setText("Invalid Input");
 		}
+	}
+	
+	//Event Listener on RadioButton ArmStrongNumber
+	@FXML
+	public void ArmStrongNumber(ActionEvent e) {
+		ArmStrong(input.getText());
 	}
 	
 	
